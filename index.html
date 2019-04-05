@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="UTF-8">
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+  <link rel="stylesheet" href="crystalGame.css">
+  <title>Crystal Game!</title>
+</head>
+
+<body>
+
+  <!-- <div class="jumbotron">
+    <h1 class="display-4">Guess The Number!</h1>
+  </div> -->
+
+  <div class="title">Guess The Number!</div>
+
+  <h1>Try Your Luck: <span id="guessTheNumber"></span></h1>
+
+  <div id="crystals"></div>
+
+  <!-- Crystal image src -->
+  <!-- <img src="../../crystal.jpg"> -->
+
+  <!-- Js below -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript">
+
+    let targetNumber = 76;
+
+    $("#guessTheNumber").text(targetNumber);
+
+    let counter = 0;
+
+    let numberOptions = [20, 30, 2, 1];
+
+    // for (let i = 0; i < numberOptions.length; i++) {
+
+    //   let imageCrystal = $("<img>");
+    //   imageCrystal.addClass("crystal-image");
+    //   imageCrystal.attr("crystal", numberOptions[i]);
+    //   $("#crystals").append(imageCrystal);
+
+    // }
+
+    for (let i = 0; i < numberOptions.length; i++) {
+
+      let imageCrystal = $("<img>");
+      imageCrystal.addClass("crystal-image");
+      imageCrystal.attr("crystal", numberOptions[i]);
+      imageCrystal.attr("src", "crystal.jpg");
+      $("#crystals").append(imageCrystal);
+
+    }
+
+    $(".crystal-image").on("click", function () {
+
+      let crystalValue = ($(this).attr("crystal"));
+      crystalValue = parseInt(crystalValue);
+      counter += crystalValue;
+
+      alert("Score " + counter);
+
+      if (counter === targetNumber) {
+        alert("You won!");
+      }
+
+      if (counter >= targetNumber) {
+        alert("You lose!");
+      }
+
+    });
+
+  </script>
+</body>
+
+</html>

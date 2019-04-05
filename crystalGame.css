@@ -1,0 +1,37 @@
+.title {
+  padding: 30px;
+  font-size: 75px;
+  text-align: center;
+  margin-top: 20px;
+  background-color: grey;
+
+  /* makes border circular below */
+   border-radius: 50%;
+}
+
+.pic2 {
+  /* margin-left: 250px;
+  margin-bottom: 700px; */
+  float: left;
+  width: 25%;
+}
+
+.pic3 {
+float: left;
+width: 25%;
+}
+
+.pic4 {
+  float: left;
+width: 25%;
+}
+
+.crystal-image {
+  width: 250px;
+  height: 200px;
+}
+
+body {
+  background-color: aqua
+
+}
